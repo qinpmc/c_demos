@@ -286,6 +286,82 @@ bool
 
 
 
+### 7 函数
+
+```
+return_type function_name( parameter list )
+{
+   body of the function
+}
+
+```
+
+```
+#include <stdio.h>
+
+int add(int num1,int num2); //函数声明
+
+int main ()
+{
+    int num = 99;
+    int res = isPrime(num);
+	printf("%d\n",res); //0 
+
+	printf("%d",add(1,2)); //3
+    return 0;
+}
+
+int add(int n1,int n2){
+	return n1+n2;
+}
+int isPrime(int i){
+	int res = 1;
+	int k;
+	for(k=2;k<i-1;k++){
+		if(i%k==0){
+			res = 0;
+			break;
+		}
+	}
+	return res;
+} 
+```
+
+
+### 8 数组
+
+- 声明数组  
+double balance[10];   
+ 
+
+- 初始化数组   
+double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+
+```
+#include <stdio.h>
+
+int add(int num1,int num2);  //函数声明
+
+int main ()
+{
+ 	int balance[5] = {1000, 2, 3, 7, 50};
+ 	int length = sizeof(balance)/sizeof(balance[0]);
+ 	printArray(balance,length);
+ 
+    return 0;
+}
+
+ 
+int printArray(int arr[],int len){
+ 	
+ 	// 数组作为函数参数，其长度不能在函数内计算数组长度 
+ 	printf("函数内数组长度：%d\n",sizeof(arr)/sizeof(arr[0])); //2  
+ 	int i ;
+ 	for(i = 0;i<len;i++){
+ 		printf("%d\n",arr[i]);
+	 }
+} 
+```
 
 
 

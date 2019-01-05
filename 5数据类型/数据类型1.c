@@ -3,7 +3,7 @@
 
 int main ()
 {
-    char c1 = "a";
+    char c1 = 'a';
     printf("½á¹ûÎª£º%d\n",sizeof(c1)); //1 
     
     short s1 = 20;
